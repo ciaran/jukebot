@@ -1,0 +1,18 @@
+Jukebot
+=======
+
+Jukebot is an IRC bot (actually an [rbot](http://ruby-rbot.org/) plugin) for controlling iTunes. It allows users connected to the same IRC server to give commands for controlling playback of music in the iTunes app.
+
+## Requirements
+
+[RubyOSA](http://rubyosa.rubyforge.org/install.html) and [rbot](http://ruby-rbot.org/rbot-trac/wiki/MacOsX).
+
+## Features
+
+* It can control iTunes either on the same system the bot is running on, or a machine on the same network (by adding :machine=>'foo.local', :username => 'foo', :password => 'bar' parameters to the OSA.app('iTunes') call).
+* Various undocumented and probably useless commands (see `jukebot.rb`).
+
+## Bugs
+
+* Since it’s used on an internal server, it has no access control. So it responds to messages from anyone (even if they are not in the same channel as the bot).
+* The source is the result of 10 minute bursts of coding whenever we wanted a new feature, so the codebase is not the best and could do with some cleaning up.
